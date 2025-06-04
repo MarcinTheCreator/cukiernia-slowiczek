@@ -1,16 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cukiernia Słowiczek</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- NAV -->
+    <nav class="flex justify-between items-center px-8 py-4 shadow-md">
+      <h1 class="text-2xl font-bold text-pink-500">Cukiernia Słowiczek</h1>
+      <div class="space-x-6">
+        <a href="#onas" class="hover:text-pink-400">O nas</a>
+        <a href="#oferta" class="hover:text-pink-400">Oferta</a>
+        <a href="#galeria" class="hover:text-pink-400">Galeria</a>
+        <a href="#kontakt" class="hover:text-pink-400">Zamów</a>
+      </div>
+    </nav>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+    <!-- HERO -->
+    <section class="text-center py-20 bg-pink-50">
+      <h2 class="text-4xl font-bold mb-4 text-pink-500">Słodko, jak lubisz</h2>
+      <p class="text-lg text-gray-600">Torty, ciasta i wypieki z sercem</p>
+    </section>
 
-<body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+    <!-- O NAS -->
+    <section id="onas" class="py-16 px-8 max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold mb-4 text-pink-500">O nas</h3>
+      <p>
+        Cukiernia Słowiczek to rodzinne miejsce, w którym tradycja spotyka się z nowoczesnością.
+        Pieczemy z pasją, używając tylko najlepszych składników. Tworzymy słodkie chwile dla Ciebie i Twoich bliskich.
+      </p>
+    </section>
 
+    <!-- OFERTA -->
+    <section id="oferta" class="bg-pink-50 py-16 px-8">
+      <h3 class="text-3xl font-bold mb-8 text-pink-500 text-center">Nasza oferta</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl mx-auto text-center">
+        <div>
+          <h4 class="text-xl font-semibold mb-2">Torty</h4>
+          <p>Dla dzieci, na śluby i urodziny – stworzymy każdy!</p>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold mb-2">Ciasta</h4>
+          <p>Od serników po brownie – świeże każdego dnia.</p>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold mb-2">Ciasteczka</h4>
+          <p>Małe słodkości idealne do kawy lub na prezent.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" class="py-16 px-8 max-w-5xl mx-auto">
+      <h3 class="text-3xl font-bold mb-8 text-pink-500 text-center">Galeria</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <img src="https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Tort czekoladowy" class="rounded-xl shadow" />
+        <img src="https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Tarta owocowa" class="rounded-xl shadow" />
+        <img src="https://images.pexels.com/photos/1055271/pexels-photo-1055271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Babeczki" class="rounded-xl shadow" />
+      </div>
+    </section>
+
+
+
+    <!-- KONTAKT -->
+    <section id="kontakt" class="bg-pink-100 py-16 px-8 text-center">
+      <h3 class="text-3xl font-bold mb-4 text-pink-600">Zamów ciasto</h3>
+      <p class="mb-4">Urodziny, wesele, każda okazja — zadzwoń lub napisz!</p>
+      <p class="text-lg font-semibold text-gray-700">📞 794 559 255</p>
+      <p class="text-lg font-semibold text-gray-700">✉️ cukierniaslowiczek@example.com</p>
+    </section>
+
+    <footer class="text-center py-4 text-sm text-gray-400">
+      © 2025 Cukiernia Słowiczek. Wszystkie prawa zastrzeżone.
+    </footer>
+  </body>
 </html>
