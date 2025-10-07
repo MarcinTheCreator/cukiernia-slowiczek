@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pl">
   <head>
@@ -5,11 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cukiernia Słowiczek</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+  body {
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Pacifico', cursive;
+  }
+
+  .logo {
+    font-family: 'Pacifico', cursive;
+  }
+</style>
+<style>
+  @keyframes slideFade {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes pulseLogo {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  .logo-anim {
+    animation: slideFade 1s ease-out forwards, pulseLogo 2s ease-in-out 1.2s infinite;
+  }
+</style>
+
+    <!-- FONTY -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+
   </head>
   <body class="bg-white text-gray-800 font-sans">
     <!-- NAV -->
     <nav class="flex justify-between items-center px-8 py-4 shadow-md">
-      <h1 class="text-2xl font-bold text-pink-500">Cukiernia Słowiczek</h1>
+      <h1 class="text-2xl font-bold text-pink-500 logo logo-anim">Cukiernia Słowiczek</h1>
       <div class="space-x-6">
         <a href="#onas" class="hover:text-pink-400">O nas</a>
         <a href="#oferta" class="hover:text-pink-400">Oferta</a>
@@ -18,14 +63,22 @@
       </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="text-center py-20 bg-pink-50">
-      <h2 class="text-4xl font-bold mb-4 text-pink-500">Słodko, jak lubisz</h2>
-      <p class="text-lg text-gray-600">Torty, ciasta i wypieki z sercem</p>
-    </section>
+    
+    <!-- HERO z tłem i CTA -->
+<section class="relative text-white text-center py-32 px-8 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg');">
+  <div class="absolute inset-0 bg-pink-900 bg-opacity-50"></div>
+  <div class="relative z-10 max-w-3xl mx-auto animate-fade-in-up">
+    <h2 class="text-5xl font-extrabold mb-4 drop-shadow-lg">Słodko, jak lubisz</h2>
+    <p class="text-xl mb-6 drop-shadow">Torty, ciasta i wypieki z sercem</p>
+    <a href="#kontakt" class="inline-block px-6 py-3 bg-pink-500 hover:bg-pink-600 transition text-white font-semibold rounded shadow-lg">
+      Zamów teraz
+    </a>
+  </div>
+</section>
+
 
     <!-- O NAS -->
-    <section id="onas" class="py-16 px-8 max-w-4xl mx-auto">
+    <section id="onas" class="py-16 px-8 max-w-4xl mx-auto" >
       <h3 class="text-3xl font-bold mb-4 text-pink-500">O nas</h3>
       <p>
         Cukiernia Słowiczek to rodzinne miejsce, w którym tradycja spotyka się z nowoczesnością.
@@ -34,7 +87,7 @@
     </section>
 
     <!-- OFERTA -->
-    <section id="oferta" class="bg-pink-50 py-16 px-8">
+    <section id="oferta" class="bg-pink-50 py-16 px-8" data-aos="fade-up">
       <h3 class="text-3xl font-bold mb-8 text-pink-500 text-center">Nasza oferta</h3>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl mx-auto text-center">
         <div>
@@ -53,7 +106,7 @@
     </section>
 
     <!-- GALERIA -->
-    <section id="galeria" class="py-16 px-8 max-w-5xl mx-auto">
+    <section id="galeria" class="py-16 px-8 max-w-5xl mx-auto" data-aos="fade-up" >
       <h3 class="text-3xl font-bold mb-8 text-pink-500 text-center">Galeria</h3>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <img src="https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Tort czekoladowy" class="rounded-xl shadow" />
@@ -75,5 +128,19 @@
     <footer class="text-center py-4 text-sm text-gray-400">
       © 2025 Cukiernia Słowiczek. Wszystkie prawa zastrzeżone.
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+</script>
+<script>
+  AOS.init({
+    duration: 1200, // czas trwania animacji w ms
+    delay: 100,     // opóźnienie startu
+    once: true      // animuje tylko raz (przy pierwszym scrollu)
+  });
+</script>
+
+
   </body>
 </html>
